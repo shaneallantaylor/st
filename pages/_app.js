@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Router from 'next/router';
 import Layout from '../components/Layout';
+import '../styles/globals.css';
 
 function routeChangeComplete() {
   window.scrollTo({ top: 0, behavior: 'smooth' });

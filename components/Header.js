@@ -1,44 +1,19 @@
-import styled from 'styled-components';
 import Link from 'next/link';
-
-const StyledHeader = styled.header`
-  height: 70px;
-  width: 100%;
-  background-color: hsla(0, 0%, 0%, 0.4);
-`;
-
-const Nav = styled.nav`
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  height: 100%;
-  padding: 0 20px;
-`;
-
-const NavItem = styled.div`
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 0 20px;
-  &:first-child {
-    margin-right: auto;
-  }
-`;
 
 export default function Header() {
   return (
-    <StyledHeader>
-      <Nav>
-        <NavItem>
+    <header className="h-20 w-full">
+      <nav className="w-full flex justify-end h-full px-5">
+        <div className="h-full flex items-center px-5 first:mr-auto">
           <Link href="/">ST</Link>
-        </NavItem>
-        <NavItem>
+        </div>
+        <div className="h-full flex items-center px-5 first:mr-auto">
           <Link href="/playground">Playground</Link>
-        </NavItem>
-        <NavItem>
+        </div>
+        <div className="h-full flex items-center px-5 first:mr-auto">
           <Link href="/blog">Blog</Link>
-        </NavItem>
-      </Nav>
-    </StyledHeader>
+        </div>
+      </nav>
+    </header>
   );
 }
