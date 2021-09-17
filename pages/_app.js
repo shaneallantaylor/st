@@ -1,6 +1,9 @@
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Router from 'next/router';
 import Layout from '../components/Layout';
+import { DEFAULT_THEME } from '../themes';
+import { applyTheme } from '../themes/utils';
 import '../styles/globals.css';
 
 function routeChangeComplete() {
